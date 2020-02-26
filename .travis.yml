@@ -1,29 +1,18 @@
-# Config file for automatic testing at travis-ci.com
-
 language: python
 python:
-  - 3.8
-  - 3.7
-  - 3.6
-  - 3.5
-
-# Command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
+    - 3.8
+    - 3.7
+    - 3.6
+    - 3.5
 install: pip install -U tox-travis
-
-# Command to run tests, e.g. python setup.py test
 script: tox
-
-# Assuming you have installed the travis-ci CLI tool, after you
-# create the Github repo and add it to Travis, run the
-# following command to finish PyPI deployment setup:
-# $ travis encrypt --add deploy.password
 deploy:
-  provider: pypi
-  distributions: sdist bdist_wheel
-  user: di-erz
-  password:
-    secure: PLEASE_REPLACE_ME
-  on:
-    tags: true
-    repo: ivlevdenis/drf_pretty_exception_handler
-    python: 3.8
+    provider: pypi
+    distributions: sdist bdist_wheel
+    user: __token__
+    password:
+        secure: pypi-AgEIcHlwaS5vcmcCJDU0MDcxMjMwLTI5YmUtNGU2ZC1iOTA2LTA0ZTAzYmYxNWM2OAACJXsicGVybWlzc2lvbnMiOiAidXNlciIsICJ2ZXJzaW9uIjogMX0AAAYgP89su9CET-3KxMD-Yqna5e--L-NVAN7AOJqo6ZgrFbo
+    on:
+        tags: true
+        repo: ivlevdenis/drf_pretty_exception_handler
+        python: 3.8
