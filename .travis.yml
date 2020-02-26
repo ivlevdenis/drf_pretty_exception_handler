@@ -6,13 +6,3 @@ python:
     - 3.5
 install: pip install -U tox-travis
 script: tox
-deploy:
-    provider: pypi
-    distributions: sdist bdist_wheel
-    user: __token__
-    password:
-        secure: pypi-AgEIcHlwaS5vcmcCJDU0MDcxMjMwLTI5YmUtNGU2ZC1iOTA2LTA0ZTAzYmYxNWM2OAACJXsicGVybWlzc2lvbnMiOiAidXNlciIsICJ2ZXJzaW9uIjogMX0AAAYgP89su9CET-3KxMD-Yqna5e--L-NVAN7AOJqo6ZgrFbo
-    on:
-        tags: true
-        repo: ivlevdenis/drf_pretty_exception_handler
-        python: 3.8
