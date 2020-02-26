@@ -10,11 +10,11 @@ with open('README.md') as readme_file:
 with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
-requirements = [ ]
+requirements = ['djangorestframework>=3.10']
 
-setup_requirements = ['pytest-runner', ]
+setup_requirements = ['pytest-runner', 'djangorestframework>=3.10']
 
-test_requirements = ['pytest>=3', ]
+test_requirements = ['pytest>=3', 'djangorestframework>=3.10']
 
 setup(
     author="Denis Ivlev",
