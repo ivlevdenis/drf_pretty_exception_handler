@@ -6,8 +6,33 @@ Django Rest Framework pretty exception handler
 
 Django Rest Framework pretty exception handler
 
+**Dependencies**
 
-* Free software: MIT license
+* Python 3.7+
+* Django 2.0+
+* Django Rest Framework 3.10+
+
+**Setup**
+
+You can install the library directly from pypi using pip:
+
+`$ pip install drf-pretty-exception-handler`
+
+Edit your REST_FRAMEWORK settings in settings.py file:
+
+```python
+
+REST_FRAMEWORK = {
+    ...
+    'EXCEPTION_HANDLER': 'drf_pretty_exception_handler.exception_handler',
+    ...
+}
+
+```
+
+License
+-------
+Free software: MIT license
 
 
 Features
